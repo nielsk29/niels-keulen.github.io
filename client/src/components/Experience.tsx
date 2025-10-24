@@ -1,5 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface ExperienceItem {
   id: number;
@@ -15,11 +17,14 @@ interface ExperienceProps {
 }
 
 export default function Experience({ experiences }: ExperienceProps) {
+  const { language } = useLanguage();
+  const t = translations[language].experience;
+
   return (
     <section id="experience" className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 md:mb-16" data-testid="text-experience-heading">
-          Experience & Education
+          {t.heading}
         </h2>
 
         <div className="space-y-8">

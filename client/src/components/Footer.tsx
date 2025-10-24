@@ -1,4 +1,6 @@
 import { Linkedin, Github, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface FooterProps {
   name: string;
@@ -10,6 +12,8 @@ interface FooterProps {
 
 export default function Footer({ name, tagline, email, linkedin, github }: FooterProps) {
   const currentYear = new Date().getFullYear();
+  const { language } = useLanguage();
+  const t = translations[language].footer;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -32,7 +36,7 @@ export default function Footer({ name, tagline, email, linkedin, github }: Foote
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3 text-sm">Quick Links</h4>
+            <h4 className="font-semibold mb-3 text-sm">{t.quickLinks}</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <button
@@ -40,7 +44,7 @@ export default function Footer({ name, tagline, email, linkedin, github }: Foote
                   className="text-muted-foreground hover-elevate active-elevate-2 rounded-md px-2 py-1"
                   data-testid="link-footer-about"
                 >
-                  About
+                  {translations[language].nav.about}
                 </button>
               </li>
               <li>
@@ -49,7 +53,7 @@ export default function Footer({ name, tagline, email, linkedin, github }: Foote
                   className="text-muted-foreground hover-elevate active-elevate-2 rounded-md px-2 py-1"
                   data-testid="link-footer-projects"
                 >
-                  Projects
+                  {translations[language].nav.projects}
                 </button>
               </li>
               <li>
@@ -58,14 +62,14 @@ export default function Footer({ name, tagline, email, linkedin, github }: Foote
                   className="text-muted-foreground hover-elevate active-elevate-2 rounded-md px-2 py-1"
                   data-testid="link-footer-contact"
                 >
-                  Contact
+                  {translations[language].nav.contact}
                 </button>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-3 text-sm">Connect</h4>
+            <h4 className="font-semibold mb-3 text-sm">{t.connect}</h4>
             <div className="flex gap-3 mb-4">
               {linkedin && (
                 <button
@@ -94,14 +98,14 @@ export default function Footer({ name, tagline, email, linkedin, github }: Foote
               </button>
             </div>
             <p className="text-xs text-muted-foreground">
-              Last updated: {currentYear}
+              {t.lastUpdated} {currentYear}
             </p>
           </div>
         </div>
 
         <div className="pt-8 border-t text-center text-sm text-muted-foreground">
           <p data-testid="text-copyright">
-            © {currentYear} {name}. All rights reserved.
+            © {currentYear} {name}. {t.allRights}
           </p>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Linkedin, Github, ExternalLink } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface ContactProps {
   email: string;
@@ -9,16 +11,18 @@ interface ContactProps {
 }
 
 export default function Contact({ email, linkedin, github, portfolio }: ContactProps) {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   return (
     <section id="contact" className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <div className="space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold" data-testid="text-contact-heading">
-            Let's Work Together
+            {t.heading}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm always open to new opportunities, collaborations, and interesting projects. 
-            Feel free to reach out if you'd like to connect!
+            {t.description}
           </p>
         </div>
 
@@ -72,7 +76,7 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
             data-testid="button-download-full-cv"
           >
             <Download className="h-5 w-5" />
-            Download Full CV
+            {t.downloadFullCV}
           </Button>
         </div>
       </div>

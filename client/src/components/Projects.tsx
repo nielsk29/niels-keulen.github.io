@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface Project {
   id: number;
@@ -18,15 +20,18 @@ interface ProjectsProps {
 }
 
 export default function Projects({ projects }: ProjectsProps) {
+  const { language } = useLanguage();
+  const t = translations[language].projects;
+
   return (
     <section id="projects" className="py-16 md:py-24 px-6 md:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="mb-12 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4" data-testid="text-projects-heading">
-            Featured Projects
+            {t.heading}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl">
-            A selection of my recent work demonstrating my skills in web development, design, and problem-solving.
+            {t.description}
           </p>
         </div>
 
@@ -76,7 +81,7 @@ export default function Projects({ projects }: ProjectsProps) {
                       data-testid={`button-live-${project.id}`}
                     >
                       <ExternalLink className="h-3 w-3" />
-                      Live Demo
+                      {t.liveDemo}
                     </Button>
                   )}
                   {project.githubUrl && (
@@ -88,7 +93,7 @@ export default function Projects({ projects }: ProjectsProps) {
                       data-testid={`button-github-${project.id}`}
                     >
                       <Github className="h-3 w-3" />
-                      Code
+                      {t.code}
                     </Button>
                   )}
                 </div>

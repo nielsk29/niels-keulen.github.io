@@ -1,6 +1,8 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
 import { Check, Target, Briefcase } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface AboutProps {
   image: string;
@@ -10,11 +12,14 @@ interface AboutProps {
 }
 
 export default function About({ image, bio, objectives, lookingFor }: AboutProps) {
+  const { language } = useLanguage();
+  const t = translations[language].about;
+
   return (
     <section id="about" className="py-16 md:py-24 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-bold mb-12 md:mb-16" data-testid="text-about-heading">
-          About Me
+          {t.heading}
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -37,7 +42,7 @@ export default function About({ image, bio, objectives, lookingFor }: AboutProps
               <div className="flex items-center gap-2 mb-4">
                 <Target className="h-5 w-5 text-primary" />
                 <h3 className="text-xl md:text-2xl font-semibold" data-testid="text-objectives-heading">
-                  My Objectives
+                  {t.objectivesHeading}
                 </h3>
               </div>
               <ul className="space-y-3">
@@ -58,7 +63,7 @@ export default function About({ image, bio, objectives, lookingFor }: AboutProps
               <div className="flex items-center gap-2 mb-4">
                 <Briefcase className="h-5 w-5 text-primary" />
                 <h3 className="text-xl md:text-2xl font-semibold" data-testid="text-looking-heading">
-                  What I'm Looking For
+                  {t.lookingHeading}
                 </h3>
               </div>
               <ul className="space-y-3">

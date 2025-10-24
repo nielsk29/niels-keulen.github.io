@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 interface HeroProps {
   name: string;
@@ -9,6 +11,9 @@ interface HeroProps {
 }
 
 export default function Hero({ name, title, objective, videoUrl }: HeroProps) {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -44,7 +49,7 @@ export default function Hero({ name, title, objective, videoUrl }: HeroProps) {
                 data-testid="button-view-projects"
                 className="gap-2"
               >
-                View Projects
+                {t.viewProjects}
                 <ArrowRight className="h-4 w-4" />
               </Button>
               <Button
@@ -55,7 +60,7 @@ export default function Hero({ name, title, objective, videoUrl }: HeroProps) {
                 className="gap-2"
               >
                 <Mail className="h-4 w-4" />
-                Contact Me
+                {t.contactMe}
               </Button>
             </div>
           </div>

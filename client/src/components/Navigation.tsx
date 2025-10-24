@@ -1,11 +1,16 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Download, Menu, X } from "lucide-react";
+import { Moon, Sun, Download, Menu, X, Languages } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export default function Navigation() {
   const [isDark, setIsDark] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+
+  const t = translations[language].nav;
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
@@ -31,6 +36,10 @@ export default function Navigation() {
     document.documentElement.classList.toggle("dark");
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === "en" ? "fr" : "en");
+  };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -40,10 +49,10 @@ export default function Navigation() {
   };
 
   const navLinks = [
-    { id: "about", label: "About" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    { id: "contact", label: "Contact" },
+    { id: "about", label: t.about },
+    { id: "projects", label: t.projects },
+    { id: "experience", label: t.experience },
+    { id: "contact", label: t.contact },
   ];
 
   return (
@@ -58,7 +67,7 @@ export default function Navigation() {
           className="text-lg font-bold tracking-tight hover-elevate active-elevate-2 rounded-md px-2 py-1"
           data-testid="link-home"
         >
-          Portfolio
+          {t.portfolio}
         </button>
 
         <div className="hidden md:flex items-center gap-8">
@@ -78,6 +87,19 @@ export default function Navigation() {
           <Button
             size="icon"
             variant="ghost"
+            onClick={toggleLanguage}
+            data-testid="button-language-toggle"
+            title={language === "en" ? "Switch to French" : "Passer à l'anglais"}
+          >
+            <div className="flex items-center gap-1">
+              <Languages className="h-5 w-5" />
+              <span className="text-xs font-semibold">{language.toUpperCase()}</span>
+            </div>
+          </Button>
+
+          <Button
+            size="icon"
+            variant="ghost"
             onClick={toggleTheme}
             data-testid="button-theme-toggle"
           >
@@ -92,7 +114,7 @@ export default function Navigation() {
             onClick={() => console.log("Download CV triggered")}
           >
             <Download className="h-4 w-4" />
-            Download CV
+            {t.downloadCV}
           </Button>
 
           <Button
@@ -131,7 +153,7 @@ export default function Navigation() {
               }}
             >
               <Download className="h-4 w-4" />
-              Download CV
+              {t.downloadCV}
             </Button>
           </div>
         </div>

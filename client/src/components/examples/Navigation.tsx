@@ -1,5 +1,10 @@
 import Navigation from "../Navigation";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 export default function NavigationExample() {
-  return <Navigation />;
+  return (
+    <LanguageProvider>
+      <Navigation />
+    </LanguageProvider>
+  );
 }
