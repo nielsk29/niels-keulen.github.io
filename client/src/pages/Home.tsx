@@ -7,152 +7,70 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/contexts/LanguageContext";
-import { translations } from "@/lib/translations";
-import avatarImage from "@assets/generated_images/Professional_headshot_portrait_c9fd9e01.png";
-import dashboardImg from "@assets/generated_images/Dashboard_project_screenshot_848077aa.png";
-import mobileImg from "@assets/generated_images/Mobile_app_project_screenshot_5f170100.png";
-import websiteImg from "@assets/generated_images/Website_project_screenshot_2eb9aced.png";
+import { portfolioConfig } from "@/my-portfolio-info";
 
 export default function Home() {
   const { language } = useLanguage();
-  const content = translations[language].content;
+  const config = portfolioConfig;
 
-  const projects = [
-    {
-      id: 1,
-      title: content.projects[0].title,
-      description: content.projects[0].description,
-      image: dashboardImg,
-      technologies: ["React", "TypeScript", "D3.js", "Algorithms"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example",
-    },
-    {
-      id: 2,
-      title: content.projects[1].title,
-      description: content.projects[1].description,
-      image: mobileImg,
-      technologies: ["Node.js", "Express", "PostgreSQL", "JWT"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example",
-    },
-    {
-      id: 3,
-      title: content.projects[2].title,
-      description: content.projects[2].description,
-      image: websiteImg,
-      technologies: ["Python", "Markdown", "Jinja2", "GitHub Pages"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com/example",
-    },
-  ];
+  const projects = config.projects.map((project) => ({
+    id: project.id,
+    title: project.title[language],
+    description: project.description[language],
+    image: project.image,
+    technologies: project.technologies,
+    liveUrl: project.liveUrl,
+    githubUrl: project.githubUrl,
+  }));
 
-  const experiences = [
-    {
-      id: 1,
-      type: "education" as const,
-      title: content.experiences[0].title,
-      organization: content.experiences[0].organization,
-      period: content.experiences[0].period,
-      description: content.experiences[0].description,
-    },
-    {
-      id: 2,
-      type: "work" as const,
-      title: content.experiences[1].title,
-      organization: content.experiences[1].organization,
-      period: content.experiences[1].period,
-      description: content.experiences[1].description,
-    },
-    {
-      id: 3,
-      type: "work" as const,
-      title: content.experiences[2].title,
-      organization: content.experiences[2].organization,
-      period: content.experiences[2].period,
-      description: content.experiences[2].description,
-    },
-  ];
+  const experiences = config.experiences.map((exp) => ({
+    id: exp.id,
+    type: exp.type as "work" | "education",
+    title: exp.title[language],
+    organization: exp.organization[language],
+    period: exp.period[language],
+    description: exp.description[language],
+  }));
 
-  const skillCategories = [
-    {
-      id: 1,
-      category: content.skillCategories[0].category,
-      icon: "code" as const,
-      skills: [
-        { name: "Python", level: "Advanced" },
-        { name: "Java", level: "Advanced" },
-        { name: "C++", level: "Intermediate" },
-        { name: "JavaScript/TypeScript" },
-      ],
-    },
-    {
-      id: 2,
-      category: content.skillCategories[1].category,
-      icon: "tools" as const,
-      skills: [
-        { name: "React" },
-        { name: "Node.js" },
-        { name: "SQL & NoSQL" },
-        { name: "REST APIs" },
-      ],
-    },
-    {
-      id: 3,
-      category: content.skillCategories[2].category,
-      icon: "design" as const,
-      skills: [
-        { name: "Git & GitHub" },
-        { name: "Linux/Bash" },
-        { name: "Docker" },
-        { name: "VS Code" },
-      ],
-    },
-    {
-      id: 4,
-      category: content.skillCategories[3].category,
-      icon: "soft" as const,
-      skills: [
-        { name: "Problem Solving" },
-        { name: "Team Collaboration" },
-        { name: "Quick Learner" },
-        { name: "Communication" },
-      ],
-    },
-  ];
+  const skillCategories = config.skills.map((skillCat) => ({
+    id: skillCat.id,
+    category: skillCat.category[language],
+    icon: skillCat.icon as "code" | "design" | "soft" | "tools",
+    skills: skillCat.skills,
+  }));
 
   return (
     <div className="min-h-screen">
       <Navigation />
       <main>
         <Hero
-          name={content.name}
-          title={content.title}
-          objective={content.objective}
-          videoUrl="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          name={config.personalInfo.name}
+          title={config.hero.title[language]}
+          objective={config.hero.objective[language]}
+          videoUrl={config.hero.presentationVideoId ? `https://www.youtube.com/embed/${config.hero.presentationVideoId}` : undefined}
         />
         <About
-          image={avatarImage}
-          bio={content.bio}
-          objectives={content.objectives}
-          lookingFor={content.lookingFor}
+          image={config.personalInfo.profileImage}
+          bio={config.about.bio[language]}
+          objectives={config.about.objectives[language]}
+          lookingFor={config.about.lookingFor[language]}
         />
         <Projects projects={projects} />
         <Experience experiences={experiences} />
         <Skills skillCategories={skillCategories} />
         <Contact
-          email="alex.johnson@email.com"
-          linkedin="https://linkedin.com/in/alexjohnson"
-          github="https://github.com/alexjohnson"
-          portfolio="https://alexjohnson.dev"
+          email={config.personalInfo.email}
+          linkedin={config.socialLinks.linkedin}
+          github={config.socialLinks.github}
+          portfolio={config.socialLinks.portfolio}
         />
       </main>
       <Footer
-        name={content.name}
-        tagline={content.tagline}
-        email="alex.johnson@email.com"
-        linkedin="https://linkedin.com/in/alexjohnson"
-        github="https://github.com/alexjohnson"
+        name={config.personalInfo.name}
+        tagline={config.hero.title[language]}
+        email={config.personalInfo.email}
+        linkedin={config.socialLinks.linkedin}
+        github={config.socialLinks.github}
       />
     </div>
   );

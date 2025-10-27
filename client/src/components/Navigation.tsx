@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Download, Menu, X, Languages } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { portfolioConfig } from "@/my-portfolio-info";
 
 export default function Navigation() {
   const [isDark, setIsDark] = useState(false);
@@ -38,6 +39,15 @@ export default function Navigation() {
 
   const toggleLanguage = () => {
     setLanguage(language === "en" ? "fr" : "en");
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = portfolioConfig.cvFile.path;
+    link.download = portfolioConfig.cvFile.filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const scrollToSection = (id: string) => {
@@ -111,7 +121,7 @@ export default function Navigation() {
             size="sm"
             className="hidden md:flex items-center gap-2"
             data-testid="button-download-cv"
-            onClick={() => console.log("Download CV triggered")}
+            onClick={handleDownloadCV}
           >
             <Download className="h-4 w-4" />
             {t.downloadCV}
@@ -148,7 +158,7 @@ export default function Navigation() {
               className="w-full flex items-center justify-center gap-2"
               data-testid="button-mobile-download-cv"
               onClick={() => {
-                console.log("Download CV triggered");
+                handleDownloadCV();
                 setIsMobileMenuOpen(false);
               }}
             >

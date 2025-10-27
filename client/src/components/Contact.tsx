@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Mail, Linkedin, Github, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
+import { portfolioConfig } from "@/my-portfolio-info";
 
 interface ContactProps {
   email: string;
@@ -13,6 +14,15 @@ interface ContactProps {
 export default function Contact({ email, linkedin, github, portfolio }: ContactProps) {
   const { language } = useLanguage();
   const t = translations[language].contact;
+
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = portfolioConfig.cvFile.path;
+    link.download = portfolioConfig.cvFile.filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="contact" className="py-16 md:py-24 px-6 md:px-8">
@@ -40,7 +50,7 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => console.log(`Open LinkedIn: ${linkedin}`)}
+                onClick={() => window.open(linkedin, "_blank")}
                 data-testid="button-linkedin"
               >
                 <Linkedin className="h-5 w-5" />
@@ -50,7 +60,7 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => console.log(`Open GitHub: ${github}`)}
+                onClick={() => window.open(github, "_blank")}
                 data-testid="button-github"
               >
                 <Github className="h-5 w-5" />
@@ -60,7 +70,7 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
               <Button
                 variant="outline"
                 size="icon"
-                onClick={() => console.log(`Open Portfolio: ${portfolio}`)}
+                onClick={() => window.open(portfolio, "_blank")}
                 data-testid="button-portfolio"
               >
                 <ExternalLink className="h-5 w-5" />
@@ -72,7 +82,7 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
             size="lg"
             variant="default"
             className="gap-2"
-            onClick={() => console.log("Download Full CV triggered")}
+            onClick={handleDownloadCV}
             data-testid="button-download-full-cv"
           >
             <Download className="h-5 w-5" />
