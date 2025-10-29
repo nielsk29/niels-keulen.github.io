@@ -23,8 +23,9 @@ export const portfolioConfig = {
 
     // Profile picture - Place your image in client/src/assets/ folder
     // Then update the path below (e.g., "./assets/my-photo.jpg")
+    // use absolute path from site root so GitHub Pages can locate the file
     profileImage:
-      "./attached_assets/generated_images/Professional_headshot_portrait_c9fd9e01.png",
+      "/attached_assets/generated_images/Professional_headshot_portrait_c9fd9e01.png",
   },
 
   // ========================================
@@ -106,7 +107,7 @@ export const portfolioConfig = {
         fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel permettant la création d'image photoréaliste représentant une scéne 3D. Le tout à été fait en C, en utilisant aucune bibliothèque de rendu 3D.",
       },
       // Place project images in client/src/assets/ or attached_assets/
-      image: "./attached_assets/generated_images/Dashboard_project_screenshot_848077aa.png",
+      image: "/attached_assets/generated_images/Dashboard_project_screenshot_848077aa.png",
       technologies: ["C", "RayTracing", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
@@ -121,7 +122,7 @@ export const portfolioConfig = {
         en: "As part of my Second of high school project, at 16 years old, I created a video game using the first technique allowing 3D in video games, RayCasting.",
         fr: "Dans le cadre du projet de mon année de première au lycée, à 16 ans, j'ai créer un jeux vidéo utilisant la première technique permetant la 3D dans les jeux vidéo, le RayCasting.",
       },
-      image: "./attached_assets/niya/Capture_niya_3D.png",
+      image: "/attached_assets/niya/Capture_niya_3D.png",
       technologies: ["Python", "RayCasting", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
@@ -283,7 +284,8 @@ export const portfolioConfig = {
   // Place your CV PDF file in the public/ or attached_assets/ folder
   // Then update the path below
   cvFile: {
-    path: "./attached_assets/CV/CV_2025.pdf", // Path to your CV file (update filename if needed)
+    // absolute path from site root (will point to docs/attached_assets/CV/CV_2025.pdf after deploy)
+    path: "/attached_assets/CV/CV_2025.pdf", // Path to your CV file (update filename if needed)
     filename: "CV_2025_Niels_Keulen.pdf", // Desired download filename (just the filename, not full path)
   },
 };
