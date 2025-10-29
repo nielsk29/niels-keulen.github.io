@@ -51,7 +51,7 @@ export const portfolioConfig = {
     },
     // Optional: Add a YouTube video ID (the part after "watch?v=" or "embed/")
     // Example: "dQw4w9WgXcQ" from https://www.youtube.com/watch?v=dQw4w9WgXcQ
-    presentationVideoId: "dQw4w9WgXcQ",
+    presentationVideoId: "56STvMBKYdw",
   },
 
   // ========================================
