@@ -44,6 +44,12 @@ jobs:
           rm -rf docs
           mkdir -p docs
           cp -a dist/public/. docs/
+          # Also copy attached assets (images, CV, etc.) if present in the repo root
+          if [ -d attached_assets ]; then
+            cp -a attached_assets docs/attached_assets
+          else
+            echo "No attached_assets folder to copy"
+          fi
           git add docs
           if git diff --cached --quiet; then
             echo "No changes to deploy"

@@ -283,7 +283,7 @@ export const portfolioConfig = {
   // Place your CV PDF file in the public/ or attached_assets/ folder
   // Then update the path below
   cvFile: {
-    path: "./attached_assets/CV", // Path to your CV file
+    path: "./attached_assets/CV/CV_2025.pdf", // Path to your CV file (update filename if needed)
     filename: "CV_2025_Niels_Keulen.pdf", // Desired download filename (just the filename, not full path)
   },
 };
