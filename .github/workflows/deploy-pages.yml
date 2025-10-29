@@ -39,20 +39,15 @@ jobs:
       - name: Bundle server with esbuild
         run: npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
 
-      - name: Git diagnostics (help debug push errors)
+      - name: Prepare docs folder for GitHub Pages
         run: |
-          echo "---- git remote ----"
-          git remote -v || true
-          echo "---- git ls-remote origin (may fail if no auth) ----"
-          git ls-remote origin || true
-          echo "---- git config ----"
-          git config --list
-          echo "---- whoami (git) ----"
-          git --version
-
-      - name: Deploy to GitHub Pages (gh-pages branch)
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/public
-          allow_empty_commit: true
+          rm -rf docs
+          mkdir -p docs
+          cp -a dist/public/. docs/
+          git add docs
+          if git diff --cached --quiet; then
+            echo "No changes to deploy"
+          else
+            git commit -m "chore(pages): update docs from dist/public [ci skip]" || true
+            git push origin HEAD:main
+          fi
