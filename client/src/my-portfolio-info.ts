@@ -108,7 +108,7 @@ export const portfolioConfig = {
         fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel permettant la création d'image photoréaliste représentant une scéne 3D. Le tout à été fait en C, en utilisant aucune bibliothèque de rendu 3D.",
       },
       // Place project images in client/src/assets/ or attached_assets/
-      image: "/assets/generated_images/Dashboard_project_screenshot_848077aa.png",
+      image: "./client/src/testassets/generated_images/Dashboard_project_screenshot_848077aa.png",
       technologies: ["C", "RayTracing", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
