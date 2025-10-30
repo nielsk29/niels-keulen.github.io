@@ -63,7 +63,6 @@ export default function Navigation() {
     { id: "about", label: t.about },
     { id: "projects", label: t.projects },
     { id: "experience", label: t.experience },
-    { id: "international", label: t.international },
     { id: "contact", label: t.contact },
   ];
 
