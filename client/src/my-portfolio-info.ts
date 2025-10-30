@@ -284,11 +284,11 @@ export const portfolioConfig = {
   // Place your CV PDF files in assets/CV/ (example names below)
   cvFile: {
     en: {
-      path: "/assets/CV",
+      path: "/assets/CV/CV_2025_Niels_Keulen_EN.pdf",
       filename: "CV_2025_Niels_Keulen_EN.pdf",
     },
     fr: {
-      path: "/assets/CV",
+      path: "/assets/C/CV_2025_Niels_Keulen_FR.pdfV",
       filename: "CV_2025_Niels_Keulen_FR.pdf",
     },
   },
