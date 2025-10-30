@@ -44,11 +44,18 @@ jobs:
           rm -rf docs
           mkdir -p docs
           cp -a dist/public/. docs/
-          # Also copy assets (images, CV, etc.) if present in the repo root
-          if [ -d assets ]; then
-            cp -a assets docs/assets
-          else
-            echo "No assets folder to copy"
+          # ensure docs/assets contains any assets from common locations
+          mkdir -p docs/assets
+          for SRC in assets attached_assets "client/src/assets" "client/src/attached_assets"; do
+            if [ -d "$SRC" ]; then
+              echo "Copying assets from $SRC"
+              cp -a "$SRC/." docs/assets/
+            fi
+          done
+          # copy favicon if present in client/
+          if [ -f client/favicon.png ]; then
+            cp client/favicon.png docs/assets/favicon.png
+            cp client/favicon.png docs/favicon.png || true
           fi
           git add docs
           if git diff --cached --quiet; then
