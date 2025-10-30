@@ -108,7 +108,7 @@ export const portfolioConfig = {
         fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel permettant la création d'image photoréaliste représentant une scéne 3D. Le tout à été fait en C, en utilisant aucune bibliothèque de rendu 3D.",
       },
       // Place project images in client/src/assets/ or attached_assets/
-      image: "generated_images/Dashboard_project_screenshot_848077aa.png",
+      image: "assets/generated_images/Dashboard_project_screenshot_848077aa.png",
       technologies: ["C", "RayTracing", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
@@ -123,7 +123,7 @@ export const portfolioConfig = {
         en: "As part of my Second of high school project, at 16 years old, I created a video game using the first technique allowing 3D in video games, RayCasting.",
         fr: "Dans le cadre du projet de mon année de première au lycée, à 16 ans, j'ai créer un jeux vidéo utilisant la première technique permetant la 3D dans les jeux vidéo, le RayCasting.",
       },
-      image: "niya/Capture_niya_3D.png",
+      image: "assets/niya/Capture_niya_3D.png",
       technologies: ["Python", "RayCasting", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
