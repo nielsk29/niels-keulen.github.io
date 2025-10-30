@@ -281,13 +281,15 @@ export const portfolioConfig = {
 
   // ========================================
   // CV/RESUME FILE
-  // ========================================
-  // Place your CV PDF file in the public/ or attached_assets/ folder
-  // Then update the path below
+  // Place your CV PDF files in assets/CV/ (example names below)
   cvFile: {
-    // absolute path from site root (docs/attached_assets/CV/CV_2025.pdf after deploy)
-    // path served from site root -> docs/assets/CV/CV_2025.pdf after deploy
-    path: "/assets/CV/CV_2025.pdf", // update filename if necessary
-    filename: "CV_2025_Niels_Keulen.pdf", // Desired download filename (just the filename, not full path)
+    en: {
+      path: "/assets/CV/CV_2025_EN.pdf",
+      filename: "CV_2025_Niels_Keulen_EN.pdf",
+    },
+    fr: {
+      path: "/assets/CV/CV_2025_FR.pdf",
+      filename: "CV_2025_Niels_Keulen_FR.pdf",
+    },
   },
 };

@@ -16,9 +16,10 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
   const t = translations[language].contact;
 
   const handleDownloadCV = () => {
+    const cvEntry = (portfolioConfig.cvFile as any)[language] ?? (portfolioConfig.cvFile as any).en;
     const link = document.createElement("a");
-    link.href = portfolioConfig.cvFile.path;
-    link.download = portfolioConfig.cvFile.filename;
+    link.href = cvEntry.path;
+    link.download = cvEntry.filename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
