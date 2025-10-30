@@ -77,7 +77,7 @@ export default function Navigation() {
           className="text-lg font-bold tracking-tight hover-elevate active-elevate-2 rounded-md px-2 py-1"
           data-testid="link-home"
         >
-          {t.portfolio}
+          Niels Keulen
         </button>
 
         <div className="hidden md:flex items-center gap-8">

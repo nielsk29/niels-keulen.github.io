@@ -16,7 +16,7 @@ export const portfolioConfig = {
   // BASIC INFORMATION
   // ========================================
   personalInfo: {
-    name: "Niel Keulen", // Replace with your full name
+    name: "Niels Keulen", // Replace with your full name
     email: "nielskeulen29@gmail.Com", // Replace with your email
     phone: "+33 6 52 44 62 25", // Optional: Add your phone number
     location: "Toulouse, France", // Optional: Your location
