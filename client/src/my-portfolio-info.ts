@@ -127,6 +127,21 @@ export const portfolioConfig = {
       liveUrl: "",
       githubUrl: "",
     },
+    {
+      id: 3,
+      title: {
+        en: "SONNK : sound recognition with KNN",
+        fr: "SONNK : reconnaissance de son avec KNN",
+      },
+      description: {
+        en: "As part of an high school project at 17, I developed a sound recognition tool with my friend Simon Morel, using the K-nearest neighbors algorithm on frequencies provided by a Fourier analysis.",
+        fr: "Dans le cadre d'un projet de lycée, à 17 ans, j'ai développé avec mon ami Simon Morel, un outil de reconnaisance de son en utilsant l'algorithme des K plus proches voisins sur les fréquence donnée par une annalyse de fourier.",
+      },
+      image: "/assets/SONNK.png",
+      technologies: ["Python", "KNN", "Algorithms", "Fourier transform", "NumPy"],
+      liveUrl: "",
+      githubUrl: "",
+    },
     // Add more projects by copying the structure above
   ],
 
