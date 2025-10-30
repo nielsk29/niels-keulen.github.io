@@ -288,7 +288,7 @@ export const portfolioConfig = {
       filename: "CV_2025_Niels_Keulen_EN.pdf",
     },
     fr: {
-      path: "/assets/C/CV_2025_Niels_Keulen_FR.pdfV",
+      path: "/assets/C/CV_2025_Niels_Keulen_FR.pdf",
       filename: "CV_2025_Niels_Keulen_FR.pdf",
     },
   },
