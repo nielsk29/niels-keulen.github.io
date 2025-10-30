@@ -92,21 +92,6 @@ export const portfolioConfig = {
   },
 
   // ========================================
-  // INTERNATIONAL
-  // Mark where you're from and where you'd like to go (bilingual)
-  // ========================================
-  international: {
-    from: {
-      en: "Toulouse, France",
-      fr: "Toulouse, France",
-    },
-    to: {
-      en: "Toronto, Canada",
-      fr: "Toronto, Canada",
-    },
-  },
-
-  // ========================================
   // PROJECTS
   // Add, remove, or modify projects as needed
   // ========================================
@@ -227,6 +212,41 @@ export const portfolioConfig = {
       },
     },
     // Add more experiences by copying the structure above
+  ],
+
+  // ========================================
+  // INTERNATIONAL (travels, exchanges, opportunities)
+  // Add past trips and planned exchanges/opportunities
+  // ========================================
+  international: [
+    {
+      id: 1,
+      country: "Spain",
+      period: { en: "Summer 2021", fr: "Été 2021" },
+      purpose: { en: "Family holiday", fr: "Vacances en famille" },
+      description: {
+        en: "Visited Barcelona and Valencia; learned about urban design and local tech meetups.",
+        fr: "Visité Barcelone et Valence ; découvert le design urbain et des meetups tech locaux.",
+      },
+      outcomes: {
+        en: ["Improved Spanish basics", "Broadened cultural perspective"],
+        fr: ["Amélioration des bases d'espagnol", "Ouverture culturelle"],
+      },
+    },
+    {
+      id: 2,
+      country: "Germany",
+      period: { en: "Planned: Summer 2026", fr: "Prévu : Été 2026" },
+      purpose: { en: "Erasmus / Study exchange", fr: "Échange d'études / Erasmus" },
+      description: {
+        en: "Plan to join an exchange program focused on distributed systems and internships.",
+        fr: "Projet d'échange centré sur les systèmes distribués et des stages en entreprise.",
+      },
+      outcomes: {
+        en: ["Gain industry experience", "Improve German and network internationally"],
+        fr: ["Gagner de l'expérience en entreprise", "Améliorer l'allemand et réseauter à l'international"],
+      },
+    },
   ],
 
   // ========================================

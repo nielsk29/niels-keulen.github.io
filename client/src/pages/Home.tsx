@@ -39,6 +39,15 @@ export default function Home() {
     skills: skillCat.skills,
   }));
 
+  const internationals = config.international?.map((it) => ({
+    id: it.id,
+    country: it.country,
+    period: it.period[language],
+    purpose: it.purpose[language],
+    description: it.description[language],
+    outcomes: it.outcomes[language],
+  })) ?? [];
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -54,14 +63,14 @@ export default function Home() {
           bio={config.about.bio[language]}
           objectives={config.about.objectives[language]}
           lookingFor={config.about.lookingFor[language]}
-          international={
-            config.international
-              ? { from: config.international.from[language], to: config.international.to[language] }
-              : undefined
-          }
         />
         <Projects projects={projects} />
         <Experience experiences={experiences} />
+        <International
+          items={internationals}
+          heading={translations[language].international.heading}
+          description={translations[language].international.description}
+        />
         <Skills skillCategories={skillCategories} />
         <Contact
           email={config.personalInfo.email}

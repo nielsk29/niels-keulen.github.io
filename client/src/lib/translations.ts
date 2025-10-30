@@ -7,6 +7,7 @@ export const translations = {
       experience: "Experience",
       contact: "Contact",
       downloadCV: "Download CV",
+      international: "International",
     },
     hero: {
       viewProjects: "View Projects",
@@ -16,8 +17,6 @@ export const translations = {
       heading: "About Me",
       objectivesHeading: "My Objectives",
       lookingHeading: "What I'm Looking For",
-      internationalFrom: "From",
-      internationalTo: "Willing to relocate to",
     },
     projects: {
       heading: "Featured Projects",
@@ -106,6 +105,10 @@ export const translations = {
           ],
         },
       ],
+      international: {
+        heading: "International",
+        description: "Past and planned international trips, exchanges and professional opportunities and what I gained (or hope to gain) from them.",
+      },
       skillCategories: [
         { category: "Programming" },
         { category: "Web Development" },
@@ -122,6 +125,7 @@ export const translations = {
       experience: "Expérience",
       contact: "Contact",
       downloadCV: "Télécharger CV",
+      international: "International",
     },
     hero: {
       viewProjects: "Voir les Projets",
@@ -131,8 +135,6 @@ export const translations = {
       heading: "À Propos de Moi",
       objectivesHeading: "Mes Objectifs",
       lookingHeading: "Ce que Je Recherche",
-      internationalFrom: "Origine",
-      internationalTo: "Souhaite se déplacer vers",
     },
     projects: {
       heading: "Projets en Vedette",
@@ -221,6 +223,10 @@ export const translations = {
           ],
         },
       ],
+      international: {
+        heading: "International",
+        description: "Voyages passés et prévus, échanges et opportunités professionnelles, et ce qu'ils m'ont apporté (ou ce que j'espère en tirer).",
+      },
       skillCategories: [
         { category: "Programmation" },
         { category: "Développement Web" },
