@@ -54,6 +54,11 @@ export default function Home() {
           bio={config.about.bio[language]}
           objectives={config.about.objectives[language]}
           lookingFor={config.about.lookingFor[language]}
+          international={
+            config.international
+              ? { from: config.international.from[language], to: config.international.to[language] }
+              : undefined
+          }
         />
         <Projects projects={projects} />
         <Experience experiences={experiences} />

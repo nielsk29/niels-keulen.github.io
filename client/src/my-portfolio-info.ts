@@ -92,6 +92,21 @@ export const portfolioConfig = {
   },
 
   // ========================================
+  // INTERNATIONAL
+  // Mark where you're from and where you'd like to go (bilingual)
+  // ========================================
+  international: {
+    from: {
+      en: "Toulouse, France",
+      fr: "Toulouse, France",
+    },
+    to: {
+      en: "Toronto, Canada",
+      fr: "Toronto, Canada",
+    },
+  },
+
+  // ========================================
   // PROJECTS
   // Add, remove, or modify projects as needed
   // ========================================
@@ -271,7 +286,7 @@ export const portfolioConfig = {
         { name: "Français", level: "Fluent" },
         { name: "English", level: "Advanced" },
         { name: "Spanish", level: "Intermediate" },
-        { name: "Dutch", level: "Beginner" },
+        { name: "Dutch", level: "Intermediate" },
       ],
     },
     // Add more skill categories by copying the structure above

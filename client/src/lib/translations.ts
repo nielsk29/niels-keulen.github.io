@@ -16,6 +16,8 @@ export const translations = {
       heading: "About Me",
       objectivesHeading: "My Objectives",
       lookingHeading: "What I'm Looking For",
+      internationalFrom: "From",
+      internationalTo: "Willing to relocate to",
     },
     projects: {
       heading: "Featured Projects",
@@ -129,6 +131,8 @@ export const translations = {
       heading: "À Propos de Moi",
       objectivesHeading: "Mes Objectifs",
       lookingHeading: "Ce que Je Recherche",
+      internationalFrom: "Origine",
+      internationalTo: "Souhaite se déplacer vers",
     },
     projects: {
       heading: "Projets en Vedette",

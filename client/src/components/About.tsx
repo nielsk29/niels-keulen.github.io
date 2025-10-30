@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card } from "@/components/ui/card";
-import { Check, Target, Briefcase } from "lucide-react";
+import { Check, Target, Briefcase, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/lib/translations";
 
@@ -9,9 +9,16 @@ interface AboutProps {
   bio: string;
   objectives: string[];
   lookingFor: string[];
+  international?: { from: string; to: string };
 }
 
-export default function About({ image, bio, objectives, lookingFor }: AboutProps) {
+export default function About({
+  image,
+  bio,
+  objectives,
+  lookingFor,
+  international,
+}: AboutProps) {
   const { language } = useLanguage();
   const t = translations[language].about;
 
@@ -35,6 +42,23 @@ export default function About({ image, bio, objectives, lookingFor }: AboutProps
                 </p>
               </div>
             </div>
+
+            {/* International section */}
+            {international && (
+              <Card className="p-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-primary" />
+                  <div>
+                    <p className="text-sm font-medium">
+                      {t.internationalFrom}: <span className="font-normal">{international.from}</span>
+                    </p>
+                    <p className="text-sm font-medium">
+                      {t.internationalTo}: <span className="font-normal">{international.to}</span>
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            )}
           </div>
 
           <div className="space-y-6">
