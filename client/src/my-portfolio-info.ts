@@ -17,14 +17,13 @@ export const portfolioConfig = {
   // ========================================
   personalInfo: {
     name: "Niels Keulen", // Replace with your full name
-    email: "nielskeulen29@gmail.Com", // Replace with your email
+    email: "nielskeulen29@gmail.com", // Replace with your email
     phone: "+33 6 52 44 62 25", // Optional: Add your phone number
     location: "Toulouse, France", // Optional: Your location
 
     // Profile picture - Place your image in client/src/assets/ folder
     // Then update the path below (e.g., "./assets/my-photo.jpg")
-    // use absolute path from site root so GitHub Pages can locate the file
-    // serve from site root -> docs/assets/... after deploy
+    // use absolute path from site root (docs/assets/... after deploy)
     profileImage:
       "/assets/generated_images/Professional_headshot_portrait_c9fd9e01.png",
   },
@@ -49,7 +48,7 @@ export const portfolioConfig = {
     },
     objective: {
       en: "Computer Science student passionate about algorithms, system design, and building efficient software solutions. Actively seeking internship opportunities to apply theoretical knowledge to real-world challenges.",
-      fr: "Étudiant en informatique passionné par les algorithmes, la conception de systèmes et la création de solutions logicielles efficaces. À la recherche active de stages pour appliquer mes connaissances théoriques à des défis réels.",
+      fr: "Étudiant en informatique passionné par les algorithmes, la conception de systèmes et la création de solutions logicielles efficaces. À la recherche de stages pour appliquer mes connaissances à des projets concrets.",
     },
     // Optional: Add a YouTube video ID (the part after "watch?v=" or "embed/")
     // Example: "dQw4w9WgXcQ" from https://www.youtube.com/watch?v=dQw4w9WgXcQ
@@ -62,7 +61,7 @@ export const portfolioConfig = {
   about: {
     bio: {
       en: "I'm a Computer Science student with a strong foundation in algorithms, data structures, and software engineering principles. I enjoy tackling complex problems and learning new technologies through hands-on projects and coursework.",
-      fr: "Je suis étudiant en informatique avec une solide base en algorithmes, structures de données et principes de génie logiciel. J'aime relever des défis complexes et apprendre de nouvelles technologies à travers des projets pratiques et des cours.",
+      fr: "Je suis étudiant en informatique avec une solide base en algorithmes, structures de données et principes du génie logiciel. J'aime relever des défis complexes et apprendre de nouvelles technologies à travers des projets pratiques et des cours.",
     },
     objectives: {
       en: [
@@ -72,9 +71,9 @@ export const portfolioConfig = {
         "Work on projects that align with my values",
       ],
       fr: [
-        "Approfondir ma compréhension des algorithmes et structures de données",
+        "Approfondir ma compréhension des algorithmes et des structures de données",
         "Acquérir une expérience pratique via des stages et projets",
-        "Construire une base solide en conception de systèmes et architecture",
+        "Construire une base solide en conception de systèmes et d'architecture",
         "Participer à des projets en accord avec mes valeurs",
       ],
     },
@@ -87,7 +86,7 @@ export const portfolioConfig = {
       fr: [
         "Stages en génie logiciel pour l'été 2026",
         "Mentorat de développeurs expérimentés",
-        "Travail étudiant dans des dommaine autres que l'informatique pour l'ouvertue d'esprit",
+        "Travail étudiant dans des domaines autres que l'informatique pour l'ouverture d'esprit",
       ],
     },
   },
@@ -104,11 +103,11 @@ export const portfolioConfig = {
         fr: "Logiciel de Rendu 3D utilisant le RayTracing",
       },
       description: {
-        en: "As part of my TIPE (Travaux d'Initiative Personnelle Encadrés) for the engineering school entrance exam, I created software that allows the creation of photorealistic images representing a 3D scene. It was made in C, without using any librairies",
-        fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel permettant la création d'image photoréaliste représentant une scéne 3D. Le tout à été fait en C, en utilisant aucune bibliothèque de rendu 3D.",
+        en: "As part of my TIPE (Travaux d'Initiative Personnelle Encadrés) for the engineering school entrance exam, I created software that produces photorealistic images of a 3D scene. It was written in C without using external rendering libraries.",
+        fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel produisant des images photoréalistes représentant une scène 3D. Le tout a été réalisé en C sans utiliser de bibliothèques de rendu externes.",
       },
-      // Place project images in client/src/assets/ or attached_assets/
-      image: "assets/tipe/photo_tipe.png",
+      // use absolute paths served from site root -> docs/assets/...
+      image: "/assets/tipe/photo_tipe.png",
       technologies: ["C", "RayTracing", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
@@ -120,10 +119,10 @@ export const portfolioConfig = {
         fr: "Jeux-vidéo 3D utilisant le RayCasting",
       },
       description: {
-        en: "As part of my Second of high school project, at 16 years old, I created a video game using the first technique allowing 3D in video games, RayCasting.",
-        fr: "Dans le cadre du projet de mon année de première au lycée, à 16 ans, j'ai créer un jeux vidéo utilisant la première technique permetant la 3D dans les jeux vidéo, le RayCasting.",
+        en: "As part of a high school project at 16, I created a 3D video game using raycasting (an early technique for 3D rendering in games).",
+        fr: "Dans le cadre d'un projet de lycée, à 16 ans, j'ai développé un jeu vidéo 3D utilisant le raycasting (technique historique de rendu 3D).",
       },
-      image: "assets/niya/Capture_niya_3D.png",
+      image: "/assets/niya/Capture_niya_3D.png",
       technologies: ["Python", "RayCasting", "Mathematics", "Algorithms"],
       liveUrl: "",
       githubUrl: "",
@@ -154,10 +153,10 @@ export const portfolioConfig = {
       description: {
         en: [
           "GPA: 3.8/4.0 - Coursework in Data Structures, Algorithms, Database Systems, and Software Engineering",
-          "Member of ACM student chapter and regular participant in competitive programming contests",
+          "Member of the ACM student chapter and regular participant in competitive programming contests",
           "Teaching Assistant for CS101: Introduction to Programming",
         ],
-        fr: ["Etude en spécialité Science du numérique"],
+        fr: ["Études en spécialité Sciences du numérique"],
       },
     },
     {
@@ -191,25 +190,24 @@ export const portfolioConfig = {
       type: "work",
       title: {
         en: "Seasonal agricultural job",
-        fr: "Travail saisonier agricole",
+        fr: "Travail saisonnier agricole",
       },
       organization: {
-        en: "EARL PIHEE – Gennes-Val-De-Loire   ",
+        en: "EARL PIHEE – Gennes-Val-De-Loire",
         fr: "EARL PIHEE – Gennes-Val-De-Loire",
       },
       period: {
         en: "Summer 2022",
-        fr: "Eté 2022",
+        fr: "Été 2022",
       },
       description: {
         en: [
-          "Built multiple full-stack applications to practice new frameworks and technologies",
-          "Completed online courses in advanced algorithms, system design, and cloud computing",
-          "Active on GitHub with contributions to open-source projects",
+          "Performed seasonal field work such as topping corn plants and general farm tasks.",
+          "This job helped me gain perspective on different professions and develop work discipline.",
         ],
         fr: [
-          "Travail dans les champs pour la catration du maïs",
-          "A permit de m'ouvrir l'esprit sur les différent métier pour ne pas rester dans ma bulle",
+          "Travail saisonnier dans les champs pour l'écimage du maïs et autres tâches agricoles.",
+          "Ce travail m'a permis d'ouvrir l'esprit sur différents métiers et de développer de la rigueur.",
         ],
       },
     },
@@ -288,7 +286,7 @@ export const portfolioConfig = {
       filename: "CV_2025_Niels_Keulen_EN.pdf",
     },
     fr: {
-      path: "/assets/C/CV_2025_Niels_Keulen_FR.pdf",
+      path: "/assets/CV/CV_2025_Niels_Keulen_FR.pdf",
       filename: "CV_2025_Niels_Keulen_FR.pdf",
     },
   },
