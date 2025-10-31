@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import International from "@/components/International";
+import Activities from "@/components/Activities";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { portfolioConfig } from "@/my-portfolio-info";
 
@@ -42,6 +43,15 @@ export default function Home() {
     outcomes: it.outcomes[language] || [],
   }));
 
+  const activitiesItems = (config.activities?.items || []).map((it) => ({
+    id: it.id,
+    name: it.name[language],
+    category: it.category[language],
+    period: it.period[language],
+    description: it.description[language],
+    outcomes: it.outcomes[language] || [],
+  }));
+
   const skillCategories = config.skills.map((skillCat) => ({
     id: skillCat.id,
     category: skillCat.category[language],
@@ -71,6 +81,11 @@ export default function Home() {
           items={internationalItems}
           heading={config.international?.heading[language] ?? "International"}
           description={config.international?.description[language]}
+        />
+        <Activities
+          items={activitiesItems}
+          heading={config.activities?.heading[language] ?? "Sports & Activities"}
+          description={config.activities?.description[language]}
         />
         <Skills skillCategories={skillCategories} />
         <Contact

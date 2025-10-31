@@ -384,4 +384,97 @@ export const portfolioConfig = {
       // Ajoute ici d'autres entrées réelles si besoin
     ],
   },
+
+  // ========================================
+  // ACTIVITIES / SPORTS & HOBBIES
+  // ========================================
+  activities: {
+    heading: {
+      en: "Sports & Other Activities",
+      fr: "Sports & Autres Activités",
+    },
+    description: {
+      en: "A list of sports and hobbies I practice or plan to pursue, with notes on what they bring to my personal and professional development.",
+      fr: "Liste des sports et loisirs que je pratique ou que je souhaite développer, avec ce qu'ils m'apportent personnellement et professionnellement.",
+    },
+    items: [
+      {
+        id: 1,
+        name: {
+          en: "Football (Club)",
+          fr: "Football (Club)",
+        },
+        category: {
+          en: "Sport",
+          fr: "Sport",
+        },
+        period: {
+          en: "Since 2015",
+          fr: "Depuis 2015",
+        },
+        description: {
+          en: "Playing as a midfielder in a local club — regular training and weekend matches.",
+          fr: "Milieu de terrain en club local — entraînements réguliers et matchs le week-end.",
+        },
+        outcomes: {
+          en: [
+            "Teamwork and communication",
+            "Physical fitness and discipline",
+            "Leadership in small-group contexts",
+          ],
+          fr: [
+            "Travail d'équipe et communication",
+            "Condition physique et discipline",
+            "Leadership en petit groupe",
+          ],
+        },
+      },
+      {
+        id: 2,
+        name: {
+          en: "Running & Fitness",
+          fr: "Course & Fitness",
+        },
+        category: {
+          en: "Sport",
+          fr: "Sport",
+        },
+        period: {
+          en: "Ongoing",
+          fr: "En cours",
+        },
+        description: {
+          en: "Regular running sessions to stay fit; occasional 10K races.",
+          fr: "Séances de course régulières pour rester en forme; courses 10 km occasionnelles.",
+        },
+        outcomes: {
+          en: ["Endurance", "Stress management", "Goal setting"],
+          fr: ["Endurance", "Gestion du stress", "Fixer des objectifs"],
+        },
+      },
+      {
+        id: 3,
+        name: {
+          en: "Photography & Travel",
+          fr: "Photographie & Voyages",
+        },
+        category: {
+          en: "Hobby",
+          fr: "Loisir",
+        },
+        period: {
+          en: "Occasional",
+          fr: "Occasionnel",
+        },
+        description: {
+          en: "Landscape and street photography during trips; helps creativity and observational skills.",
+          fr: "Photographie de paysage et de rue lors de voyages; développe créativité et sens de l'observation.",
+        },
+        outcomes: {
+          en: ["Creative composition", "Attention to detail", "Visual storytelling"],
+          fr: ["Composition créative", "Sens du détail", "Raconter visuellement"],
+        },
+      },
+    ],
+  },
 };
