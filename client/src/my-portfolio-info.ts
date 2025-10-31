@@ -103,8 +103,8 @@ export const portfolioConfig = {
         fr: "Logiciel de Rendu 3D utilisant le RayTracing",
       },
       description: {
-        en: "As part of my TIPE (Travaux d'Initiative Personnelle Encadrés) for the engineering school entrance exam, I created software that produces photorealistic images of a 3D scene. It was written in C without using external rendering libraries.",
-        fr: "Dans le cadre de mon TIPE pour le concours d'entrée en école d'ingénieur, j'ai créé un logiciel produisant des images photoréalistes représentant une scène 3D. Le tout a été réalisé en C sans utiliser de bibliothèques de rendu externes.",
+        en: "For my TIPE (Travaux d'Initiative Personnelle Encadrés) I implemented a renderer that produces photorealistic images of 3D scenes. The project was written in C without using external rendering libraries.",
+        fr: "Dans le cadre de mon TIPE, j'ai développé un moteur de rendu produisant des images photoréalistes de scènes 3D. Le projet a été réalisé en C sans utiliser de bibliothèques de rendu externes.",
       },
       // use absolute paths served from site root -> docs/assets/...
       image: "/assets/tipe/photo_tipe.png",
@@ -119,8 +119,8 @@ export const portfolioConfig = {
         fr: "SONNK : reconnaissance de son avec KNN",
       },
       description: {
-        en: "As part of an high school project at 17, I developed a sound recognition tool with my friend Simon Morel, using the K-nearest neighbors algorithm on frequencies provided by a Fourier analysis.",
-        fr: "Dans le cadre d'un projet de lycée, à 17 ans, j'ai développé avec mon ami Simon Morel, un outil de reconnaisance de son en utilsant l'algorithme des K plus proches voisins sur les fréquence donnée par une annalyse de fourier.",
+        en: "As part of a high school project at 17, I developed a sound recognition tool with a friend, using K‑nearest neighbors on frequency features obtained via Fourier analysis.",
+        fr: "Dans le cadre d'un projet de lycée à 17 ans, j'ai développé avec un ami un outil de reconnaissance sonore en utilisant l'algorithme des K plus proches voisins sur des caractéristiques fréquentielles issues d'une analyse de Fourier.",
       },
       image: "/assets/sonnk/SONNK.png",
       technologies: ["Python", "KNN", "Algorithms", "Fourier transform", "NumPy"],
@@ -167,9 +167,7 @@ export const portfolioConfig = {
         fr: "2025 - 2028",
       },
       description: {
-        en: [
-          "Studies in Digital Sciences"
-        ],
+        en: ["Studies in digital sciences."],
         fr: ["Études en spécialité Sciences du numérique"],
       },
     },
@@ -277,8 +275,8 @@ export const portfolioConfig = {
     {
       id: 4,
       category: {
-        en: "Langage",
-        fr: "Langue",
+        en: "Languages",
+        fr: "Langues",
       },
       icon: "soft",
       skills: [
@@ -315,38 +313,38 @@ export const portfolioConfig = {
       fr: "Expériences Internationales & Projets",
     },
     description: {
-      en: "Places I've visited for study, work or travel and opportunities I'd like to pursue abroad. Each entry notes what I gained or expect to gain from the experience.",
-      fr: "Lieux visités pour études, travail ou voyage et opportunités internationales que j'envisage. Chaque entrée décrit ce que j'ai appris ou ce que j'espère en retirer.",
+      en: "Places I've visited for study, work or travel and opportunities I plan to pursue abroad. Each entry notes what I gained or expect to gain from the experience.",
+      fr: "Lieux visités pour études, travail ou voyage et opportunités internationales envisagées. Chaque entrée indique ce que j'ai appris ou ce que j'espère en retirer.",
     },
     items: [
       {
         id: 1,
         country: {
-          en: "Netherland",
-          fr: "Pays-Bas",
+          en: "Netherlands",
+          fr: "Pays‑Bas",
         },
         period: {
-          en: "Two times a year",
-          fr: "Deux fois par ans",
+          en: "Twice a year",
+          fr: "Deux fois par an",
         },
         purpose: {
-          en: "See family and sometimes traveling to the big cities (Amsterdam, Rotterdam, Eindhoven, etc)",
-          fr: "Voir la famille et parfois visité les grandes ville (Amsterdam, Rotterdam, Eindhoven, etc)",
+          en: "Visit family and occasionally travel to major cities (Amsterdam, Rotterdam, Eindhoven, etc.)",
+          fr: "Voir la famille et parfois visiter les grandes villes (Amsterdam, Rotterdam, Eindhoven, etc.)",
         },
         description: {
-          en: "My father is Dutch, he started living in France when he was 23, so I visit my family there about twice a year.",
-          fr: "Mon père est Néerlandais, il a commencé à vivre en france à partir de 23 ans, donc je vais voir la famille là bas environ deux fois par ans.",
+          en: "My father is Dutch and moved to France at 23, so I visit family there about twice a year.",
+          fr: "Mon père est néerlandais et s'est installé en France à 23 ans; je rends visite à la famille là‑bas environ deux fois par an.",
         },
         outcomes: {
           en: [
-            "It's a different culture to the one I've always had in France, and it's given me a new outlook on life.",
-            "I feel European",
-            "I know a bit of the language",
+            "Exposure to a culture different from the one I grew up with in France, broadening my perspective",
+            "A stronger sense of being European",
+            "I speak some Dutch",
           ],
           fr: [
-            "Une culture différente de la france que j'ai toujours eu et m'apporte une ouverture d'esprit",
-            "Je me sens européeen",
-            "Je connais un peu la langue",
+            "Exposition à une culture différente de celle où j'ai grandi en France, élargissant ma vision",
+            "Sentiment d'appartenance européen renforcé",
+            "Je parle un peu le néerlandais",
           ],
         },
       },
@@ -354,30 +352,30 @@ export const portfolioConfig = {
         id: 2,
         country: {
           en: "Planned: China or South America — Exchange",
-          fr: "Prévu : Chine ou Amerique du sud — Échange",
+          fr: "Prévu : Chine ou Amérique du Sud — Échange",
         },
         period: {
-          en: "Planned: First semester of 2027-2028",
-          fr: "Prévu : Premier semestre 2027-2028",
+          en: "Planned: first semester 2027–2028",
+          fr: "Prévu : premier semestre 2027–2028",
         },
         purpose: {
           en: "Academic exchange to deepen my computer science studies",
           fr: "Échange universitaire pour approfondir mes études en informatique",
         },
         description: {
-          en: "Looking for semester-long exchange or internship to gain international academic experience.",
+          en: "Seeking a semester‑long exchange or internship to gain international academic experience.",
           fr: "Recherche d'un échange semestriel ou d'un stage pour acquérir une expérience académique internationale.",
         },
         outcomes: {
           en: [
-            "Improve language skills in the local language and in English",
-            "Discovering a culture far removed from Western culture",
-            "Gain international experience",
+            "Improve language skills (local language and English)",
+            "Discover a culture very different from Western culture",
+            "Gain international academic or professional experience",
           ],
           fr: [
-            "Améliorer les compétences linguistiques dans la langue locale et en anglais",
-            "Découvrir une culture éloigné de la culture occidentale",
-            "Obtenir une expérience internationale",
+            "Améliorer les compétences linguistiques (langue locale et anglais)",
+            "Découvrir une culture très différente de la culture occidentale",
+            "Acquérir une expérience académique ou professionnelle internationale",
           ],
         },
       },
@@ -401,20 +399,20 @@ export const portfolioConfig = {
       {
         id: 1,
         name: {
-          en: "Football (Club)",
-          fr: "Football (Club)",
+          en: "Volleyball (Club & AS)",
+          fr: "Volleyball (Club & AS)",
         },
         category: {
           en: "Sport",
           fr: "Sport",
         },
         period: {
-          en: "Since 2015",
-          fr: "Depuis 2015",
+          en: "Since 2021",
+          fr: "Depuis 2021",
         },
         description: {
-          en: "Playing as a midfielder in a local club — regular training and weekend matches.",
-          fr: "Milieu de terrain en club local — entraînements réguliers et matchs le week-end.",
+          en: "Play competitively for the INP Toulouse sports association.",
+          fr: "Je joue en compétition au sein de l'association sportive de l'INP Toulouse.",
         },
         outcomes: {
           en: [
@@ -444,8 +442,8 @@ export const portfolioConfig = {
           fr: "En cours",
         },
         description: {
-          en: "Regular running sessions to stay fit; occasional 10K races.",
-          fr: "Séances de course régulières pour rester en forme; courses 10 km occasionnelles.",
+          en: "Regular running sessions to stay fit.",
+          fr: "Séances de course régulières pour rester en forme.",
         },
         outcomes: {
           en: ["Endurance", "Stress management", "Goal setting"],
@@ -455,24 +453,24 @@ export const portfolioConfig = {
       {
         id: 3,
         name: {
-          en: "Photography & Travel",
-          fr: "Photographie & Voyages",
+          en: "Music: Piano, Guitar & DJing",
+          fr: "Musique : Piano, Guitare & DJ",
         },
         category: {
           en: "Hobby",
           fr: "Loisir",
         },
         period: {
-          en: "Occasional",
-          fr: "Occasionnel",
+          en: "Frequent",
+          fr: "Fréquent",
         },
         description: {
-          en: "Landscape and street photography during trips; helps creativity and observational skills.",
-          fr: "Photographie de paysage et de rue lors de voyages; développe créativité et sens de l'observation.",
+          en: "I have played guitar since childhood and piano since secondary school; I play in a group at ENSEEIHT and recently started DJing.",
+          fr: "Je joue de la guitare depuis l'enfance et du piano depuis le lycée; je joue dans un groupe à l'ENSEEIHT et j'ai récemment commencé le DJ.",
         },
         outcomes: {
-          en: ["Creative composition", "Attention to detail", "Visual storytelling"],
-          fr: ["Composition créative", "Sens du détail", "Raconter visuellement"],
+          en: ["Creative composition", "Attention to detail", "Visual/audio storytelling"],
+          fr: ["Composition créative", "Sens du détail", "Raconter musicalement"],
         },
       },
     ],
