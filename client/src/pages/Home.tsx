@@ -6,6 +6,7 @@ import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import International from "@/components/International";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { portfolioConfig } from "@/my-portfolio-info";
 
@@ -30,6 +31,15 @@ export default function Home() {
     organization: exp.organization[language],
     period: exp.period[language],
     description: exp.description[language],
+  }));
+
+  const internationalItems = (config.international?.items || []).map((it) => ({
+    id: it.id,
+    country: it.country[language],
+    period: it.period[language],
+    purpose: it.purpose[language],
+    description: it.description[language],
+    outcomes: it.outcomes[language] || [],
   }));
 
   const skillCategories = config.skills.map((skillCat) => ({
@@ -57,6 +67,11 @@ export default function Home() {
         />
         <Projects projects={projects} />
         <Experience experiences={experiences} />
+        <International
+          items={internationalItems}
+          heading={config.international?.heading[language] ?? "International"}
+          description={config.international?.description[language]}
+        />
         <Skills skillCategories={skillCategories} />
         <Contact
           email={config.personalInfo.email}

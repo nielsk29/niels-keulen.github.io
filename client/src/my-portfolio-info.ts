@@ -25,7 +25,7 @@ export const portfolioConfig = {
     // Then update the path below (e.g., "./assets/my-photo.jpg")
     // use absolute path from site root (docs/assets/... after deploy)
     profileImage:
-      "/assets/generated_images/Professional_headshot_portrait_c9fd9e01.png",
+      "/assets/pp.jpeg",
   },
 
   // ========================================
@@ -303,5 +303,81 @@ export const portfolioConfig = {
       path: "/assets/CV/CV_2025_Niels_Keulen_FR.pdf",
       filename: "CV_2025_Niels_Keulen_FR.pdf",
     },
+  },
+
+  // ========================================
+  // INTERNATIONAL / TRAVEL & EXCHANGE
+  // Mark past trips, exchanges and planned trips and what you gained / expect to gain
+  // ========================================
+  international: {
+    heading: {
+      en: "International Experience & Plans",
+      fr: "Expériences Internationales & Projets",
+    },
+    description: {
+      en: "Places I've visited for study, work or travel and opportunities I'd like to pursue abroad. Each entry notes what I gained or expect to gain from the experience.",
+      fr: "Lieux visités pour études, travail ou voyage et opportunités internationales que j'envisage. Chaque entrée décrit ce que j'ai appris ou ce que j'espère en retirer.",
+    },
+    items: [
+      {
+        id: 1,
+        country: {
+          en: "Spain",
+          fr: "Espagne",
+        },
+        period: {
+          en: "Summer 2022",
+          fr: "Été 2022",
+        },
+        purpose: {
+          en: "Seasonal work and cultural immersion",
+          fr: "Travail saisonnier et immersion culturelle",
+        },
+        description: {
+          en: "Worked on an agricultural team, learned practical skills and gained a broader view of different professions.",
+          fr: "Travail saisonnier agricole, acquisition de compétences pratiques et ouverture sur d'autres métiers.",
+        },
+        outcomes: {
+          en: [
+            "Improved teamwork and physical endurance",
+            "Broadened perspective beyond academic life",
+          ],
+          fr: [
+            "Amélioration du travail en équipe et de l'endurance",
+            "Ouverture d'esprit au-delà de la vie académique",
+          ],
+        },
+      },
+      {
+        id: 2,
+        country: {
+          en: "Planned: Spain — Exchange",
+          fr: "Prévu : Espagne — Échange",
+        },
+        period: {
+          en: "Planned: Summer 2025",
+          fr: "Prévu : Été 2025",
+        },
+        purpose: {
+          en: "Academic exchange to deepen algorithms and system design studies",
+          fr: "Échange universitaire pour approfondir les études en algorithmes et conception de systèmes",
+        },
+        description: {
+          en: "Looking for semester-long exchange or internship to gain international academic experience.",
+          fr: "Recherche d'un échange semestriel ou d'un stage pour acquérir une expérience académique internationale.",
+        },
+        outcomes: {
+          en: [
+            "Improve language skills",
+            "Gain international research or internship experience",
+          ],
+          fr: [
+            "Améliorer les compétences linguistiques",
+            "Obtenir une expérience internationale en recherche ou en stage",
+          ],
+        },
+      },
+      // Ajoute ici d'autres entrées réelles si besoin
+    ],
   },
 };
