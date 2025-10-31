@@ -2,6 +2,7 @@ export const translations = {
   en: {
     nav: {
       portfolio: "Portfolio",
+      international: "International",
       about: "About",
       projects: "Projects",
       experience: "Experience",
@@ -115,6 +116,7 @@ export const translations = {
   fr: {
     nav: {
       portfolio: "Portfolio",
+      international: "International",
       about: "À Propos",
       projects: "Projets",
       experience: "Expérience",
@@ -182,9 +184,7 @@ export const translations = {
         },
         {
           title: "Plateforme de Blog Personnel",
-          description: "Générateur de site statique avec support Markdown, coloration syntaxique pour les extraits de code et processus de build optimisé.",
-        },
-      ],
+          description
       experiences: [
         {
           title: "Licence en Informatique",
