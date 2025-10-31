@@ -6,12 +6,13 @@ import { portfolioConfig } from "@/my-portfolio-info";
 
 interface ContactProps {
   email: string;
+  phone?: string; // added
   linkedin?: string;
   github?: string;
   portfolio?: string;
 }
 
-export default function Contact({ email, linkedin, github, portfolio }: ContactProps) {
+export default function Contact({ email, phone, linkedin, github, portfolio }: ContactProps) {
   const { language } = useLanguage();
   const t = translations[language].contact;
 
@@ -45,6 +46,18 @@ export default function Contact({ email, linkedin, github, portfolio }: ContactP
           >
             {email}
           </a>
+
+          {phone && (
+            <div>
+              <a
+                href={`tel:${phone.replace(/\s+/g, "")}`}
+                className="block text-lg md:text-xl text-muted-foreground hover-elevate active-elevate-2 rounded-md px-2 py-1"
+                data-testid="link-phone"
+              >
+                {phone}
+              </a>
+            </div>
+          )}
 
           <div className="flex justify-center gap-4">
             {linkedin && (

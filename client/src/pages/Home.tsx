@@ -60,6 +60,7 @@ export default function Home() {
         <Skills skillCategories={skillCategories} />
         <Contact
           email={config.personalInfo.email}
+          phone={config.personalInfo.phone}
           linkedin={config.socialLinks.linkedin}
           github={config.socialLinks.github}
           portfolio={config.socialLinks.portfolio}
