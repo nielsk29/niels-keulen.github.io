@@ -113,7 +113,7 @@ export const portfolioConfig = {
       githubUrl: "",
     },
     {
-      id: 2,
+      id: 3,
       title: {
         en: "3D Video Game with RayCasting",
         fr: "Jeux-vidéo 3D utilisant le RayCasting",
@@ -128,7 +128,7 @@ export const portfolioConfig = {
       githubUrl: "",
     },
     {
-      id: 3,
+      id: 2,
       title: {
         en: "SONNK : sound recognition with KNN",
         fr: "SONNK : reconnaissance de son avec KNN",
@@ -167,9 +167,7 @@ export const portfolioConfig = {
       },
       description: {
         en: [
-          "GPA: 3.8/4.0 - Coursework in Data Structures, Algorithms, Database Systems, and Software Engineering",
-          "Member of the ACM student chapter and regular participant in competitive programming contests",
-          "Teaching Assistant for CS101: Introduction to Programming",
+          "Studies in Digital Sciences"
         ],
         fr: ["Études en spécialité Sciences du numérique"],
       },
