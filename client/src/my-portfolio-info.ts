@@ -322,45 +322,47 @@ export const portfolioConfig = {
       {
         id: 1,
         country: {
-          en: "Spain",
-          fr: "Espagne",
+          en: "Netherland",
+          fr: "Pays-Bas",
         },
         period: {
-          en: "Summer 2022",
-          fr: "Été 2022",
+          en: "Two times a year",
+          fr: "Deux fois par ans",
         },
         purpose: {
-          en: "Seasonal work and cultural immersion",
-          fr: "Travail saisonnier et immersion culturelle",
+          en: "See family and sometimes traveling to the big cities (Amsterdam, Rotterdam, Eindhoven, etc)",
+          fr: "Voir la famille et parfois visité les grandes ville (Amsterdam, Rotterdam, Eindhoven, etc)",
         },
         description: {
-          en: "Worked on an agricultural team, learned practical skills and gained a broader view of different professions.",
-          fr: "Travail saisonnier agricole, acquisition de compétences pratiques et ouverture sur d'autres métiers.",
+          en: "My father is Dutch, he started living in France when he was 23, so I visit my family there about twice a year.",
+          fr: "Mon père est Néerlandais, il a commencé à vivre en france à partir de 23 ans, donc je vais voir la famille là bas environ deux fois par ans.",
         },
         outcomes: {
           en: [
-            "Improved teamwork and physical endurance",
-            "Broadened perspective beyond academic life",
+            "It's a different culture to the one I've always had in France, and it's given me a new outlook on life.",
+            "I feel European",
+            "I know a bit of the language",
           ],
           fr: [
-            "Amélioration du travail en équipe et de l'endurance",
-            "Ouverture d'esprit au-delà de la vie académique",
+            "Une culture différente de la france que j'ai toujours eu et m'apporte une ouverture d'esprit",
+            "Je me sens européeen",
+            "Je connais un peu la langue",
           ],
         },
       },
       {
         id: 2,
         country: {
-          en: "Planned: Spain — Exchange",
-          fr: "Prévu : Espagne — Échange",
+          en: "Planned: China or South America — Exchange",
+          fr: "Prévu : Chine ou Amerique du sud — Échange",
         },
         period: {
-          en: "Planned: Summer 2025",
-          fr: "Prévu : Été 2025",
+          en: "Planned: First semester of 2027-2028",
+          fr: "Prévu : Premier semestre 2027-2028",
         },
         purpose: {
-          en: "Academic exchange to deepen algorithms and system design studies",
-          fr: "Échange universitaire pour approfondir les études en algorithmes et conception de systèmes",
+          en: "Academic exchange to deepen my computer science studies",
+          fr: "Échange universitaire pour approfondir mes études en informatique",
         },
         description: {
           en: "Looking for semester-long exchange or internship to gain international academic experience.",
@@ -368,12 +370,14 @@ export const portfolioConfig = {
         },
         outcomes: {
           en: [
-            "Improve language skills",
-            "Gain international research or internship experience",
+            "Improve language skills in the local language and in English",
+            "Discovering a culture far removed from Western culture",
+            "Gain international experience",
           ],
           fr: [
-            "Améliorer les compétences linguistiques",
-            "Obtenir une expérience internationale en recherche ou en stage",
+            "Améliorer les compétences linguistiques dans la langue locale et en anglais",
+            "Découvrir une culture éloigné de la culture occidentale",
+            "Obtenir une expérience internationale",
           ],
         },
       },
