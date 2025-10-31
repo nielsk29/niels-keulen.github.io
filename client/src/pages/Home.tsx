@@ -69,7 +69,7 @@ export default function Home() {
           objective={config.hero.objective[language]}
           videoUrl={config.hero.presentationVideoId ? `https://www.youtube.com/embed/${config.hero.presentationVideoId}` : undefined}
         />
-        <Abou
+        <About
           image={config.personalInfo.profileImage}
           bio={config.about.bio[language]}
           objectives={config.about.objectives[language]}
@@ -79,7 +79,7 @@ export default function Home() {
         <Experience experiences={experiences} />
         <International
           items={internationalItems}
-          heading={config.international?.heading[language] ?? "International"}
+          heading={config.international?.heading[language] ?? "Internaional"}
           description={config.international?.description[language]}
         />
         <Activities
