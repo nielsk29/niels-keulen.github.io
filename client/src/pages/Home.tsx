@@ -79,7 +79,7 @@ export default function Home() {
         <Experience experiences={experiences} />
         <International
           items={internationalItems}
-          heading={config.international?.heading[language] ?? "Internaional"}
+          heading={config.international?.heading[language] ?? "International"}
           description={config.international?.description[language]}
         />
         <Activities
