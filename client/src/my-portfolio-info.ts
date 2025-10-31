@@ -430,29 +430,6 @@ export const portfolioConfig = {
       {
         id: 2,
         name: {
-          en: "Running & Fitness",
-          fr: "Course & Fitness",
-        },
-        category: {
-          en: "Sport",
-          fr: "Sport",
-        },
-        period: {
-          en: "Ongoing",
-          fr: "En cours",
-        },
-        description: {
-          en: "Regular running sessions to stay fit.",
-          fr: "Séances de course régulières pour rester en forme.",
-        },
-        outcomes: {
-          en: ["Endurance", "Stress management", "Goal setting"],
-          fr: ["Endurance", "Gestion du stress", "Fixer des objectifs"],
-        },
-      },
-      {
-        id: 3,
-        name: {
           en: "Music: Piano, Guitar & DJing",
           fr: "Musique : Piano, Guitare & DJ",
         },
