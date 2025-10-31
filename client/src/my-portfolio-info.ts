@@ -113,21 +113,6 @@ export const portfolioConfig = {
       githubUrl: "",
     },
     {
-      id: 3,
-      title: {
-        en: "3D Video Game with RayCasting",
-        fr: "Jeux-vidéo 3D utilisant le RayCasting",
-      },
-      description: {
-        en: "As part of a high school project at 16, I created a 3D video game using raycasting (an early technique for 3D rendering in games).",
-        fr: "Dans le cadre d'un projet de lycée, à 16 ans, j'ai développé un jeu vidéo 3D utilisant le raycasting (technique historique de rendu 3D).",
-      },
-      image: "/assets/niya/Capture_niya_3D.png",
-      technologies: ["Python", "RayCasting", "Mathematics", "Algorithms"],
-      liveUrl: "",
-      githubUrl: "",
-    },
-    {
       id: 2,
       title: {
         en: "SONNK : sound recognition with KNN",
@@ -142,6 +127,22 @@ export const portfolioConfig = {
       liveUrl: "",
       githubUrl: "",
     },
+    {
+      id: 3,
+      title: {
+        en: "3D Video Game with RayCasting",
+        fr: "Jeux-vidéo 3D utilisant le RayCasting",
+      },
+      description: {
+        en: "As part of a high school project at 16, I created a 3D video game using raycasting (an early technique for 3D rendering in games).",
+        fr: "Dans le cadre d'un projet de lycée, à 16 ans, j'ai développé un jeu vidéo 3D utilisant le raycasting (technique historique de rendu 3D).",
+      },
+      image: "/assets/niya/Capture_niya_3D.png",
+      technologies: ["Python", "RayCasting", "Mathematics", "Algorithms"],
+      liveUrl: "",
+      githubUrl: "",
+    },
+   
     // Add more projects by copying the structure above
   ],
 
