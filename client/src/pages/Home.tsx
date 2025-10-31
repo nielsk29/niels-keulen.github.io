@@ -69,7 +69,7 @@ export default function Home() {
           objective={config.hero.objective[language]}
           videoUrl={config.hero.presentationVideoId ? `https://www.youtube.com/embed/${config.hero.presentationVideoId}` : undefined}
         />
-        <About
+        <Abou
           image={config.personalInfo.profileImage}
           bio={config.about.bio[language]}
           objectives={config.about.objectives[language]}

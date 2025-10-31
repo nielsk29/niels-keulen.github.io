@@ -62,7 +62,7 @@ export default function Navigation() {
   const navLinks = [
     { id: "about", label: t.about },
     { id: "projects", label: t.projects },
-    { id: "experie", label: t.experience },
+    { id: "experience", label: t.experience },
     { id: "international", label: t.international },
     { id: "contact", label: t.contact },
   ];
