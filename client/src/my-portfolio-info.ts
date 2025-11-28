@@ -25,7 +25,7 @@ export const portfolioConfig = {
     // Then update the path below (e.g., "./assets/my-photo.jpg")
     // use absolute path from site root (docs/assets/... after deploy)
     profileImage:
-      "/assets/pp.jpeg",
+      "/assets/Niels_Keulen.jpg",
   },
 
   // ========================================
